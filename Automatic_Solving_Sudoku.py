@@ -1,84 +1,84 @@
-a_1 = 0
-a_2 = 0
-a_3 = 0
-a_4 = 0
-a_5 = 0
-a_6 = 0
-a_7 = 0
-a_8 = 0
-a_9 = 0
-b_1 = 0
-b_2 = 0
-b_3 = 0
-b_4 = 0
-b_5 = 0
-b_6 = 0
-b_7 = 0
-b_8 = 0
-b_9 = 0
-c_1 = 0
-c_2 = 0
-c_3 = 0
-c_4 = 0
-c_5 = 0
-c_6 = 0
-c_7 = 0
-c_8 = 0
-c_9 = 0
-d_1 = 0
-d_2 = 0
-d_3 = 0
-d_4 = 0
-d_5 = 0
-d_6 = 0
-d_7 = 0
-d_8 = 0
-d_9 = 0
-e_1 = 0
-e_2 = 0
-e_3 = 0
-e_4 = 0
-e_5 = 0
-e_6 = 0
-e_7 = 0
-e_8 = 0
-e_9 = 0
-f_1 = 0
-f_2 = 0
-f_3 = 0
-f_4 = 0
-f_5 = 0
-f_6 = 0
-f_7 = 0
-f_8 = 0
-f_9 = 0
-g_1 = 0
-g_2 = 0
-g_3 = 0
-g_4 = 0
-g_5 = 0
-g_6 = 0
-g_7 = 0
-g_8 = 0
-g_9 = 0
-h_1 = 0
-h_2 = 0
-h_3 = 0
-h_4 = 0
-h_5 = 0
-h_6 = 0
-h_7 = 0
-h_8 = 0
-h_9 = 0
-i_1 = 0
-i_2 = 0
-i_3 = 0
-i_4 = 0
-i_5 = 0
-i_6 = 0
-i_7 = 0
-i_8 = 0
-i_9 = 0
+a_1 = " "
+a_2 = " "
+a_3 = 3
+a_4 = " "
+a_5 = 4
+a_6 = 2
+a_7 = " "
+a_8 = 9
+a_9 = " "
+b_1 = " "
+b_2 = 9
+b_3 = " "
+b_4 = " "
+b_5 = 6
+b_6 = " "
+b_7 = 5
+b_8 = " "
+b_9 = " "
+c_1 = 5
+c_2 = " "
+c_3 = " "
+c_4 = " "
+c_5 = " "
+c_6 = " "
+c_7 = " "
+c_8 = 1
+c_9 = " "
+d_1 = " "
+d_2 = " "
+d_3 = 1
+d_4 = 7
+d_5 = " "
+d_6 = " "
+d_7 = 2
+d_8 = 8
+d_9 = 5
+e_1 = " "
+e_2 = " "
+e_3 = 8
+e_4 = " "
+e_5 = " "
+e_6 = " "
+e_7 = 1
+e_8 = " "
+e_9 = " "
+f_1 = 3
+f_2 = 2
+f_3 = 9
+f_4 = " "
+f_5 = " "
+f_6 = 8
+f_7 = 7
+f_8 = " "
+f_9 = " "
+g_1 = " "
+g_2 = 3
+g_3 = " "
+g_4 = " "
+g_5 = " "
+g_6 = " "
+g_7 = " "
+g_8 = " "
+g_9 = 1
+h_1 = " "
+h_2 = " "
+h_3 = 5
+h_4 = " "
+h_5 = 9
+h_6 = " "
+h_7 = " "
+h_8 = 2
+h_9 = " "
+i_1 = " "
+i_2 = 8
+i_3 = " "
+i_4 = 2
+i_5 = 1
+i_6 = " "
+i_7 = 6
+i_8 = " "
+i_9 = " "
 
 a = [a_1, a_2, a_3, a_4, a_5, a_6, a_7, a_8, a_9]
 b = [b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9]
@@ -92,8 +92,10 @@ i = [i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9]
 
 alpha = [a, b, c, d, e, f, g, h, i]
 
+alpha[6][0] = " "
 
-def showing_map():
+
+def Showing_map():
     print(" " + str(a[0]) + "  |  " + str(a[1]) + "  |  " + str(a[2]) + "  |  " + str(a[3]) + "  |  " + str(a[4]) +
           "  |  " + str(a[5]) + "  |  " + str(a[6]) + "  |  " + str(a[7]) + "  |  " + str(a[8]))
     print("- - - - - - - - | - - - - - - - - | - - - - - - - -")
@@ -123,5 +125,45 @@ def showing_map():
 
 
 
+def Solver():
+    global blanks_num
+    checking_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    for i in range(len(alpha)):
 
-showing_map()
+        for j in range(len(alpha[i])):
+            print("-")
+            if alpha[i][j] == " ":
+                for e in range(9):
+
+                    if a[e] != alpha[i][j] or alpha[e][i] != alpha[i][j]:
+
+                        if a[e] != " " or alpha[e][i] != " ":
+
+                            if a[e] in checking_nums:
+                                try:
+                                    checking_nums.remove(a[e])
+                                except:
+                                    pass
+
+                            if alpha[e][i] in checking_nums:
+                                try:
+                                    checking_nums.remove(alpha[e][i])
+                                except:
+                                    pass
+
+                if len(checking_nums) == 1:
+                    alpha[i][j] = checking_nums[0]
+                    checking_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    break
+                else:
+                    checking_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+Solver()
+
+Showing_map()
+
+Solver()
+
+Showing_map()
