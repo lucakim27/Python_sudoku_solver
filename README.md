@@ -1,13 +1,18 @@
 # Sudoku_solver
 
-This is an default sudoku example.
 
-https://dingo.sbs.arizona.edu/~sandiway/sudoku/wildcatjan17p.gif
 
-This is an initial sudoku example.
 
-https://dingo.sbs.arizona.edu/~sandiway/sudoku/wildcatjan17.gif
+https://dingo.sbs.arizona.edu/~sandiway/sudoku/wildcatjan17p.gif  (Initial sudoku example)
 
-This is an answer of the sudoku example above.
 
-You can edit the initial sudoku example as you want to following the map i made.
+
+
+https://dingo.sbs.arizona.edu/~sandiway/sudoku/wildcatjan17.gif  (Answer of the sudoku example above)
+
+
+
+
+<p align="center">
+  <img src="Screen Shot 2021-02-07 at 4.21.14 PM.png">
+</p>
